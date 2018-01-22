@@ -1,0 +1,18 @@
+Start checking proof: ex1_implication   ✔ 
+Start checking proof: e2_implication   ✘  -> cannot deduce implication: A => B 
+Start checking proof: prepositionWithAND_good   ✔ 
+Start checking proof: ex3_implication   ✔ 
+Start checking proof: ex2_equality   ✔ 
+Start checking proof: ex3_eequality   ✔ 
+Start checking proof: ex4_negation   ✔ 
+Start checking proof: myproof1   ✔ 
+Start checking proof: myproof2   ✔ 
+Start checking proof: eqiality   ✔ 
+Start checking proof: myproof4   ✔ 
+Start checking proof: myproof4   ✔ 
+Start checking proof: modusPonens   ✔ 
+Start checking proof: principleOfExcludedMiddle   ✔ 
+Start checking proof: deMorgansLaw   ✔ 
+Axiom: A
+Start checking proof: A   ✘  -> cannot deduce variable: A 
+Start checking proof: example_with_axiom   ✔ 

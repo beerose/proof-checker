@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="next" href="Eval.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Rules" rel="Chapter" href="Rules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Lexer" rel="Chapter" href="Lexer.html"><title>Expr</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Eval.html" title="Eval">Next</a>
+</div>
+<h1>Module <a href="type_Expr.html">Expr</a></h1>
+
+<pre><span class="keyword">module</span> Expr: <code class="code">sig</code> <a href="Expr.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module with expression type and to_string function implementation<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEexpr"><span class="keyword">type</span> <code class="type"></code>expr</span> = <code class="type">[ `And of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `End<br>       | `Eq of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `Error of string<br>       | `False<br>       | `Frame of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a> list<br>       | `Goal of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `Impl of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `Name of string<br>       | `Neg of <a href="Expr.html#TYPEexpr">expr</a><br>       | `Or of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `Paren of <a href="Expr.html#TYPEexpr">expr</a><br>       | `Prog of <a href="Expr.html#TYPEexpr">expr</a> * <a href="Expr.html#TYPEexpr">expr</a><br>       | `Proof of <a href="Expr.html#TYPEexpr">expr</a> list<br>       | `True<br>       | `Var of char ]</code> </pre>
+
+
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type">([< `And of 'a * 'a<br>         | `End<br>         | `Eq of 'a * 'a<br>         | `Error of string<br>         | `False<br>         | `Frame of 'a * 'a list<br>         | `Goal of 'a * 'a<br>         | `Impl of 'a * 'a<br>         | `Name of string<br>         | `Neg of 'a<br>         | `Or of 'a * 'a<br>         | `Paren of 'a<br>         | `Prog of 'a * 'a<br>         | `Proof of 'a list<br>         | `True<br>         | `Var of char<br>         > `And `Impl ]<br>        as 'a) -><br>       string</code></pre><div class="info ">
+Function to_string converts each expression to string<br>
+</div>
+</body></html>

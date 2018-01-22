@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Eval.html">
+<link rel="next" href="Main.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Rules" rel="Chapter" href="Rules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Lexer" rel="Chapter" href="Lexer.html"><title>Rules</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Eval.html" title="Eval">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Main.html" title="Main">Next</a>
+</div>
+<h1>Module <a href="type_Rules.html">Rules</a></h1>
+
+<pre><span class="keyword">module</span> Rules: <code class="code">sig</code> <a href="Rules.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module implementing natural deduction rules<br>
+</div>
+<hr width="100%">
+<br>
+They are applied in inverse way - it checks if all facts needen to inferr an exprssion are already proven.<br>
+
+<pre><span id="TYPEinverse_nd_rule"><span class="keyword">type</span> <code class="type"></code>inverse_nd_rule</span> = <code class="type"><a href="Expr.html#TYPEexpr">Expr.expr</a> * <a href="Expr.html#TYPEexpr">Expr.expr</a> list -> bool</code> </pre>
+<div class="info ">
+Common type for all inversed rules<br>
+</div>
+
+
+<pre><span id="VALandI"><span class="keyword">val</span> andI</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: conjunction introduction<br>
+</div>
+
+<pre><span id="VALandE"><span class="keyword">val</span> andE</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: conjunction elimination<br>
+</div>
+
+<pre><span id="VALorI"><span class="keyword">val</span> orI</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: disjunction introduction<br>
+</div>
+
+<pre><span id="VALorE"><span class="keyword">val</span> orE</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: disjunction elimination<br>
+</div>
+
+<pre><span id="VALimplI"><span class="keyword">val</span> implI</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: implication introduction<br>
+</div>
+
+<pre><span id="VALimplE"><span class="keyword">val</span> implE</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: implication elimination<br>
+</div>
+
+<pre><span id="VALnegI"><span class="keyword">val</span> negI</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: negation introduction<br>
+</div>
+
+<pre><span id="VALnegE"><span class="keyword">val</span> negE</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: negation elimination<br>
+</div>
+
+<pre><span id="VALfalseI"><span class="keyword">val</span> falseI</span> : <code class="type"><a href="Rules.html#TYPEinverse_nd_rule">inverse_nd_rule</a></code></pre><div class="info ">
+Inverse rule: false introduction<br>
+</div>
+</body></html>

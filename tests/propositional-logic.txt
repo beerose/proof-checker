@@ -1,0 +1,224 @@
+goal ex1_implication: p /\ q => q /\ p
+proof
+[p /\ q:
+  q;
+  p;
+  q /\ p];
+p /\ q => q /\ p
+end.
+
+goal e2_implication: A => A
+proof
+[ A : A ];
+A => B
+end.
+
+goal prepositionWithAND_good: A /\ (A => B) => B
+proof
+[ A /\ (A => B) :
+A;
+A => B;
+B ];
+A /\ (A => B) => B
+end.
+
+goal ex3_implication: p \/ q => q \/ p
+proof
+[p \/ q:
+  [p: q \/ p];
+  p => q \/ p;
+  [q: q \/ p];
+  q => q \/ p;
+  q \/ p];
+p \/ q => q \/ p
+end.
+
+goal ex2_equality: (p /\ q) /\ r <=> p /\ q /\ r
+proof
+[p /\ (q /\ r):
+  p;
+  q /\ r;
+  q;
+  p /\ q;
+  r;
+  p /\ q /\ r];
+p /\ (q /\ r) => p /\ q /\ r;
+[p /\ q /\ r:
+  p /\ q;
+  r;
+  p;
+  q;
+  q /\ r;
+  p /\ (q /\ r)];
+p /\ q /\ r => p /\ (q /\ r);
+(p /\ q) /\ r <=> p /\ q /\ r
+end.
+
+goal ex3_eequality: p /\ (q \/ r) <=> p /\ q \/ p /\ r
+proof
+[p /\ (q \/ r):
+  p;
+  q \/ r;
+  [q:
+    p /\ q;
+    p /\ q \/ p /\ r];
+  q => p /\ q \/ p /\ r;
+  [r:
+    p /\ r;
+    p /\ q \/ p /\ r];
+  r => p /\ q \/ p /\ r;
+  p /\ q \/ p /\ r];
+p /\ (q \/ r) => p /\ q \/ p /\ r;
+[p /\ q \/ p /\ r:
+  [p /\ q:
+    p];
+  p /\ q => p;
+  [p /\ r:
+    p];
+  p /\ r => p;
+  p;
+  [p /\ q:
+    q;
+    q \/ r];
+  p /\ q => q \/ r;
+  [p /\ r:
+    r;
+    q \/ r];
+  p /\ r => q \/ r;
+  q \/ r;
+  p /\ (q \/ r)];
+p /\ q \/ p /\ r => p /\ (q \/ r);
+p /\ (q \/ r) <=> p /\ q \/ p /\ r	  
+end.
+
+goal ex4_negation: p <=> ~~p	
+proof
+[p:
+  [~p: F];
+  ~~p];
+p => ~~p;
+[~~p:
+  p];
+~~p => p;
+p <=> ~~p	    
+end.
+
+goal myproof1: p => p \/ q
+proof
+[p:
+  p;
+  p \/ q];
+p => p \/ q
+end.
+
+goal myproof2: A \/ (B /\ C) => (A \/ B) /\ (A \/ C)
+proof
+[A \/ (B /\ C):
+  [A:
+    A;
+    (A \/ B);
+    A;
+    (A \/ C);
+    (A \/ B) /\ (A \/ C)
+  ];
+  [B /\ C:
+    B /\ C;
+    B;
+    (A \/ B);
+    B /\ C;
+    C;
+    (A \/ C);
+    (A \/ B) /\ (A \/ C)
+  ];
+  A \/ (B /\ C);
+  (A \/ B) /\ (A \/ C)
+];
+A \/ (B /\ C) => (A \/ B) /\ (A \/ C)
+end.
+
+
+goal eqiality: p <=> p
+proof
+[p: p];
+p <=> p
+end.
+
+
+goal myproof4: A => B => A
+proof
+[ A : [ B : A];
+B => A];
+A => B => A
+end.
+
+goal myproof4: A => A => A
+proof
+[ A :
+[ A : A ];
+A => A ];
+A => A => A
+end.
+
+goal modusPonens: A /\ (A => B) => B
+proof
+[ A /\ (A => B) :
+A;
+A => B;
+B ];
+A /\ (A => B) => B
+end.
+
+goal principleOfExcludedMiddle: A \/ ~A
+proof
+[ ~(A \/ ~A):
+[A:
+A;
+(A \/ ~A);
+~(A \/ ~A);
+F];
+~A;
+A \/ ~A;
+~(A \/ ~A);
+F];
+~~(A \/ ~A);
+A \/ ~A
+end.
+
+goal deMorgansLaw: ~(A \/ B) => ~A /\ ~B
+proof
+[~(A \/ B):
+[A:
+A;
+A \/ B;
+~(A \/ B);
+F
+];
+[B:
+B;
+A \/ B;
+~(A \/ B);
+F
+];
+~A;
+~B;
+~A /\ ~B
+];
+~(A \/ B) => ~A /\ ~B
+end.
+
+Axiom: A end.
+
+goal A: A
+proof
+A;
+A
+end.
+
+goal example_with_axiom: p => (p \/ ~p)
+proof
+Axiom: p \/ ~p;
+[p: 
+   p \/ ~p	
+];
+p => (p \/ ~p)
+end.
