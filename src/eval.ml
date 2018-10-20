@@ -1,7 +1,7 @@
 (** Module implements evaluation of the proof 
 The proof evaluated by this module start either with `Prog or `Axiom.
-`Prog is evaluated by the program and `Axiom is append to the global list of facts.
-It is also possible to define an Axiom inside a proof. It's also added to the list of facts. *)
+`Prog is evaluated by the program and `Axiom is appended to the global list of facts.
+It is also possible to define an Axiom inside of a proof. It's also added to the list of facts. *)
 open Expr
 open Rules
 
