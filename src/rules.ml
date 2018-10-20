@@ -1,7 +1,7 @@
 (** Module implementing natural deduction rules *) 
-(** They are applied in inverse way - it checks if all facts needen to inferr an exprssion are already proven.
+(** They are applied in inverse way - it checks if all facts needed to inferr an expression are already proven.
   Flags:
-  bind - allows to use facts proven ealier in the file in further proofs
+  bind - allows to use already proven facts in further proofs
 *)
 
 open Expr
@@ -100,5 +100,4 @@ let falseI : inverse_nd_rule = fun (expr, env) ->
     | x::xs -> if find (`Neg(x), env) then true else aux env
     | [] -> false
   in aux env
-
-  (**/**)
+(**/**)
