@@ -19,8 +19,7 @@ Every proof starts with the word **goal**, then there is particular proof's name
   </p>
 
 Proof is written in linear notation where the nested proofs are separated with semicolon. Each of them can be either a single formula or a *frame*. A single formula must be possible to infer using reasoning rules and facts that were proven ealier in the proof. 
-A frame is written in square braces and it consists a single fomrula -- its premise and a proof using that premise. We can consider following example as a part of some bigger proof:
-<center>**[A: A]**</center>
+A frame is written in square braces and it consists a single fomrula — its premise and a proof using that premise. We can consider following example as a part of some bigger proof: **[A: A]**.
 It stands for **assume A is true, then A**. We can infer A inside the frame due to its premise. And the conclusion would be **A => A**, which is the only information we can use in the next steps of the proof. We can no longer use previous assumption about **A** thus it was only avaliable inside the frame. 
 
 ## Syntax
