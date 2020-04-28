@@ -1,10 +1,10 @@
 # Proof checker for natural deduction
 
 ## Natural deduction for propositional logic
-Propositional logic allows us to build up expressions from propositional variables A,B,C,… using propositional connectives like →, ∧, ∨, and ¬. Natural deduction is a formal prove system where every logical reasoning is expressed with inference rules similar to natural reasoning. Proofs are built by putting together smaller proofs, according to the rules.In this system every proof starts with some hypothesis and ends up with some conclusion.
+Propositional logic allows us to build up expressions from propositional variables A,B,C,… using propositional connectives like →, ∧, ∨, and ¬. Natural deduction is a formal prove system where every logical reasoning is expressed with inference rules similar to natural reasoning. Proofs are built by putting together smaller proofs, according to the rules. In this system every proof starts with a hypothesis and ends up with the conclusion.
 
 ## Rules for propositional logic
-Natural deduction rules are divided into two groups: elimination rules and introducing rules. A set of rules should be complete and sound to make it possible to infer any valid conclusion and never infer invalid ones. 
+Natural deduction rules are divided into two groups: elimination rules and introducing rules. 
 
 <p align="center">
 <img width="543" alt="rules" src="https://user-images.githubusercontent.com/9019397/80528156-c9620c80-8995-11ea-8d55-08ae45b45ee5.png">
@@ -12,14 +12,14 @@ Natural deduction rules are divided into two groups: elimination rules and intro
 
 ## Proof notation
 
-Every proof starts with the word **goal**, then there is particular proof's name and the formula we want to prove. Exact proof is placed between two key wrods **proof** and **end.**. Example proof can look like that:
+Every proof starts with the word **goal**. Then there is proof's name and the formula that is the subject of the proof. The actual proof is placed between two keywords: **proof** and **end.**. Example proof:
 
 <p>
 <img width="563" alt="proof" src="https://user-images.githubusercontent.com/9019397/80528154-c830df80-8995-11ea-9c8b-c4564cb695e6.png">
   </p>
 
-Proof is written in linear notation where the nested proofs are separated with semicolon. Each of them can be either a single formula or a *frame*. A single formula must be possible to infer using reasoning rules and facts that were proven ealier in the proof. 
-A frame is written in square braces and it consists a single fomrula — its premise and a proof using that premise. We can consider following example as a part of some bigger proof: **[A: A]**.
+Proof is written in linear notation where the nested proofs are separated by semicolons. Each of them can be either a single formula or a *frame*. Formula is correct if it can be infered using reasoning rules or/and facts already proven.
+A frame is written in square brackets and it consists a single fomrula — its premise and a proof using that premise. We can consider following example as a part of some bigger proof: **[A: A]**.
 It stands for **assume A is true, then A**. We can infer A inside the frame due to its premise. And the conclusion would be **A => A**, which is the only information we can use in the next steps of the proof. We can no longer use previous assumption about **A** thus it was only avaliable inside the frame. 
 
 ## Syntax
