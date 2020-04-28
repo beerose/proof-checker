@@ -1,7 +1,5 @@
 # Proof checker for natural deduction
 
-Link: https://proof-checker.herokuapp.com/
-
 ## Natural deduction for propositional logic
 Propositional logic allows us to build up expressions from propositional variables A,B,C,… using propositional connectives like →, ∧, ∨, and ¬. Natural deduction is a formal prove system where every logical reasoning is expressed with inference rules similar to natural reasoning. Proofs are built by putting together smaller proofs, according to the rules.In this system every proof starts with some hypothesis and ends up with some conclusion.
 
